@@ -1,0 +1,19 @@
+.profile__add-button{
+  background-image: url(../../../images/plusVector.svg);
+  display: flex;
+  align-self: center;
+  box-sizing: border-box;
+  background-color: #000000;
+  height: 50px;
+  width: 150px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  border: 2px solid #FFFFFF;
+  margin: 0 0 0 auto;
+}
+.profile__add-button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}

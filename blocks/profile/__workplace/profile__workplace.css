@@ -1,0 +1,17 @@
+.profile__workplace{
+font-family: 'Inter', 'Arial', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+margin: 0;
+color: #FFFFFF;
+grid-column: -3 / -1;
+margin: 0;
+padding: 0;
+text-overflow: ellipsis;
+white-space: nowrap;
+overflow: hidden;
+max-height: 18px;
+
+}
