@@ -15,3 +15,15 @@ overflow: hidden;
 max-height: 18px;
 
 }
+
+@media screen and (max-width: 1023px) {
+  .profile__workplace{
+    align-items: center;
+    line-height: 17px;
+  }
+
+@media screen and (max-width: 695px) {
+  .profile__workplace{
+    font-size: 14px;
+  }
+}

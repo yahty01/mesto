@@ -1,0 +1,11 @@
+.card__item-like-button{
+  display: block;
+  background-image: url(../../../images/love.svg);
+  width: 22px;
+  height: 30px;
+  background-position: center;
+  border: none;
+  background-repeat: no-repeat;
+  background-color: #FFFFFF;
+  margin-right: 20px;
+}

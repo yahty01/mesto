@@ -13,6 +13,21 @@
   /*Свойство text-overflow добавляет троеточие в конец обрезанного текста в знак того, что текст не помещался в блок и был обрезан. */
   white-space: nowrap;
   /* Здесь переводы строки проигнорированы, а подряд идущие пробелы, если присмотреться – сжаты в один (например, перед комментарием // ) */
-  overflow: hidden;
   max-height: 39px;
+}
+
+@media screen and (max-width: 1023px) {
+  .profile__name{
+    align-items: center;
+    line-height: 33px;
+  }
+}
+
+@media screen and (max-width: 695px) {
+  .profile__name{
+    font-size: 27px;
+    max-width: 189px;
+    text-align: right;
+    margin-left: 30px;
+  }
 }

@@ -4,6 +4,29 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto;
-  gap: 17px;
+  grid-row-gap: 20px;
+  grid-column-gap: 17px;
+  margin: 0 auto;
+  /* width: calc((282px * 3) - (17px  * 2)); */
  
 }
+@media screen and (max-width: 1215px){
+   .card__items {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 51px 0 0 0;
+    margin: 0 auto;
+    width:calc(282px * 2 - 34px) ;
+  }
+ }
+
+ @media screen and (max-width: 695px){
+  .card__items {
+   grid-template-columns: repeat(1, 1fr);
+   padding: 36px 19px 0 19px;
+   margin: 0 auto;
+   width:282px ;
+ }
+}
+
+
+   

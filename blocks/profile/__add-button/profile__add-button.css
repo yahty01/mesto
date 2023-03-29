@@ -17,3 +17,12 @@
   opacity: 0.6;
   cursor: pointer;
 }
+
+@media screen and (max-width: 1023px) {
+  .profile__add-button{
+    width: 282px;
+    margin: 31px auto 0 auto;
+    height: 50px;
+    background-image: url(../../../images/miniplus.svg);
+  }
+}
