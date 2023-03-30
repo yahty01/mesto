@@ -29,10 +29,11 @@
 /* form */
 @import url(../blocks/form/form.css);
 @import url(../blocks/form/__input/form__input.css);
+@import url(../blocks/form/__submit/form__submit.css);
 @import url(../blocks/form/__input/_type/form__input_type_job.css);
 @import url(../blocks/form/__input/_type/form__input_type_name.css);
-@import url(../blocks/form/__submit/form__submit);
 @import url(../blocks/form/__title/form__title.css);
+
 /* popup */
 @import url(../blocks/popup/popup.css);
 @import url(../blocks/popup/__close-button/popup__close-button.css);
