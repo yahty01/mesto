@@ -9,3 +9,8 @@
   background-color: #FFFFFF;
   margin-right: 20px;
 }
+
+.card__item-like-button:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}

@@ -21,6 +21,7 @@ max-height: 18px;
     align-items: center;
     line-height: 17px;
   }
+}
 
 @media screen and (max-width: 695px) {
   .profile__workplace{
