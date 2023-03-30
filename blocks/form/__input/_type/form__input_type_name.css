@@ -1,6 +1,10 @@
 .form__input_type_name {
   padding-bottom: 10px;
   margin: 43px 36px 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
 
 }
 

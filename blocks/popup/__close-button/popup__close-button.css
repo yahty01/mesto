@@ -1,14 +1,14 @@
 .popup__close-button {
   position: absolute;
+  right: -39px;
   padding: 0;
   top: -39px;
-  right: -39px;
   height: 32px;
+  background: rgba(0, 0, 0, 0);
   background-image: url(../../../images/CloseIcon.svg);
   width: 32px;
+  transition: opacity 0.3s;
   cursor: pointer;
-  transition: opacity 0.4s;
-  background: rgba(0, 0, 0, 0);
   background-size: cover;
   border: none;
 }
