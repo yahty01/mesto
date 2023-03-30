@@ -17,7 +17,7 @@
   opacity: 0.6;
 }
 
-/* @media (max-width: 1023px) {
+@media (max-width: 1023px) {
   .popup__close-button {
     background-image: url(../../../images/CloseIcon1280.svg);
     top: -35px;
@@ -25,4 +25,4 @@
     height: 20px;
     width: 20px;
   }
-} */
+}
