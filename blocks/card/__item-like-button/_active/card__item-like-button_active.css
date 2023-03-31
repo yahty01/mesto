@@ -1,6 +1,5 @@
-.card__item-like-button{
-  display: block;
-  background-image: url(../../../images/love.svg);
+.card__item-like-button_active{
+  background-image: url(../../../../images/BLACKLOVE.svg);
   width: 22px;
   height: 30px;
   background-position: center;
@@ -8,9 +7,4 @@
   background-repeat: no-repeat;
   background-color: rgba(0, 0, 0, 0);
   margin-right: 20px;
-}
-
-.card__item-like-button:hover {
-  opacity: 0.5;
-  cursor: pointer;
 }

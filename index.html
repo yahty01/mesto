@@ -5,21 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Путешествие по россии, портфолио" />
     <meta name="keywords" content="Россия, Путешествие" />
-    <meta name="author" content="Савельев   Егор" />
+    <meta name="author" content="Савельев Егор" />
     <link rel="stylesheet" href="./pages/index.css" />
     <title>Mesto</title>
   </head>
 
   <body class="root">
-    <div class="page">
+    <main class="page">
       <header class="header">
         <img src="./images/Vector.svg" alt="Логотип Место" class="logo header__logo" />
       </header>
 
       <section class="profile">
-        <div class="profile__avatar">
-          <img src="./images/image.jpg" alt="Аватарка" class="profile__avatar-image" />
-        </div>
+          <img src="./images/image.jpg" alt="Аватарка" class="profile__avatar-image"/>
         <div class="profile__info">
           <h1 class="profile__name">Жак-Ив Кусто</h1>
           <button class="profile__edit-button" type="button"></button>
@@ -31,45 +29,45 @@
       <section class="card">
         <ul class="card__items">
           <li class="card__item">
-            <img src="./images/Гора Эльбрус.jpg" alt="Эльбрус" class="card__item-image" />
+            <img src="./images/c1.jpg" alt="Эльбрус" class="card__item-image" />
             <div class="card__item-description">
-              <h2 class="card__item-title">Карачаевск</h2>
-              <button class="card__item-like-button"></button>
+              <h2 class="card__item-title">Мексика</h2>
+              <button type="button" class="card__item-like-button"></button>
             </div>
           </li>
           <li class="card__item">
-            <img src="./images/Гора Эльбрус.jpg" alt="Эльбрус" class="card__item-image" />
+            <img src="./images/c2.jpg" alt="Эльбрус" class="card__item-image" />
             <div class="card__item-description">
-              <h2 class="card__item-title">Карачаевск</h2>
-              <button class="card__item-like-button"></button>
+              <h2 class="card__item-title">Бразилия</h2>
+              <button type="button" class="card__item-like-button"></button>
             </div>
           </li>
           <li class="card__item">
-            <img src="./images/Гора Эльбрус.jpg" alt="Эльбрус" class="card__item-image" />
+            <img src="./images/c3.jpg" alt="Эльбрус" class="card__item-image" />
             <div class="card__item-description">
-              <h2 class="card__item-title">Карачаевск</h2>
-              <button class="card__item-like-button"></button>
+              <h2 class="card__item-title">Чехия</h2>
+              <button type="button" class="card__item-like-button"></button>
             </div>
           </li>
           <li class="card__item">
-            <img src="./images/Гора Эльбрус.jpg" alt="Эльбрус" class="card__item-image" />
+            <img src="./images/c4.jpg" alt="Эльбрус" class="card__item-image" />
             <div class="card__item-description">
-              <h2 class="card__item-title">Карачаевск</h2>
-              <button class="card__item-like-button"></button>
+              <h2 class="card__item-title">Аргентина</h2>
+              <button type="button" class="card__item-like-button"></button>
             </div>
           </li>
           <li class="card__item">
-            <img src="./images/Гора Эльбрус.jpg" alt="Эльбрус" class="card__item-image" />
+            <img src="./images/c5.jpg" alt="Эльбрус" class="card__item-image" />
             <div class="card__item-description">
-              <h2 class="card__item-title">Карачаевск</h2>
-              <button class="card__item-like-button"></button>
+              <h2 class="card__item-title">Испания</h2>
+              <button type="button" class="card__item-like-button"></button>
             </div>
           </li>
           <li class="card__item">
-            <img src="./images/Гора Эльбрус.jpg" alt="Эльбрус" class="card__item-image" />
+            <img src="./images/c6.jpg" alt="Эльбрус" class="card__item-image" />
             <div class="card__item-description">
-              <h2 class="card__item-title">Карачаевск</h2>
-              <button class="card__item-like-button"></button>
+              <h2 class="card__item-title">Франция</h2>
+              <button type="button" class="card__item-like-button"></button>
             </div>
           </li>
         </ul>
@@ -81,17 +79,16 @@
       <div class="popup">
         <div class="popup__container">
           <button class="popup__close-button" type="button"></button>
+          <h2 class="popup__title">Редактировать профиль</h2>
           <form class="form" name="editProfile">
-            <h2 class="form__title">Редактировать профиль</h2>
             <input type="text" placeholder="Ваше имя" class="form__input form__input_type_name" name="profileName" id="profile_name" />
             <input type="text" placeholder="Ваша профессия" class="form__input form__input_type_job" name="profileJob" id="profile_job" />
             <button type="submit" class="form__submit">Сохранить</button>
           </form>
         </div>
       </div>
-    </div>
+    </main>
 
     <script src="./script/profile.js"></script>
   </body>
 </html>
-в

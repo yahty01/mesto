@@ -1,6 +1,5 @@
 .profile__name {
   margin: 0;
-  font-family: 'Inter', 'Arial', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 42px;
@@ -12,13 +11,16 @@
   /*Свойство text-overflow добавляет троеточие в конец обрезанного текста в знак того, что текст не помещался в блок и был обрезан. */
   white-space: nowrap;
   /* Здесь переводы строки проигнорированы, а подряд идущие пробелы, если присмотреться – сжаты в один (например, перед комментарием // ) */
-  max-height: 39px;
+  max-width: 500px;
+  overflow: hidden;
+  text-align: center;
 }
 
 @media screen and (max-width: 1023px) {
   .profile__name{
     align-items: center;
     line-height: 33px;
+    max-width: 350px;
   }
 }
 

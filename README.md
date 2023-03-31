@@ -1,17 +1,18 @@
-# Проект: Место
+<h1 align="center">Hi there, I'm <a href="https://daniilshat.ru/" target="_blank">Egor Savelev</a> 
+<img src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif" height="32"/></h1>
 
-### Обзор
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=36BCF75F&background=FFFFFF00&multiline=true&width=700&lines=An+exciting+journey+through+Russia.;this+is+my+first+responsive+site%2C+but+not+the+last+%3A)" alt="Typing SVG" /></a>
+# Проект: MESTO
 
-* Figma
-* Картинки
+Используемые технологии:
+<ul>
+<li>HTML,CSS, JavaScript</li>
+<li>Flexbox</li>
+<li>Grid layot</li>
+<li>БЭМ Nested</li>
+<li>Адаптивная верстка</li>
+</ul>
 
-**Figma**
+https://yahty01.github.io/mesto/
 
-* [Ссылка на макет в Figma](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1)
-
-**Картинки**
-
-Доставать картинки предстоит из Фигмы. Это расхожая практика, поэтому полезно потренироваться.
-Не забудьте [оптимизировать картинки](https://tinypng.com/), чтобы ваш сайт загружался быстрее.
-
-Удачи!
+Требуеться: сделать eng версию 
