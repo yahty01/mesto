@@ -1,5 +1,4 @@
 .profile__info{
-  max-height: 73px;
   align-self: center;
   display: grid;
   grid-template-columns: 1fr 24px;
@@ -7,7 +6,7 @@
   grid-row-gap: 8px;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .profile__info{
     text-align: center;
     margin-top: 26px;

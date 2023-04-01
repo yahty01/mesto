@@ -16,7 +16,7 @@
   text-align: center;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .profile__name{
     align-items: center;
     line-height: 33px;
