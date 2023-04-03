@@ -1,19 +1,19 @@
-.profile{
+.profile {
   width: 100%;
   display: flex;
   margin: 40px auto 0;
   max-width: 880px;
-  
+
 }
 
-@media screen and (max-width: 1024px){
-.profile {
-  max-width: none;
+@media screen and (max-width: 1024px) {
+  .profile {
+    max-width: none;
     flex-direction: column;
     width: calc(100% - (19px + 19px));
     padding: 42px 19px 0 19px;
     align-items: center;
     justify-content: space-between;
     margin: 0;
- }
+  }
 }
