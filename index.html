@@ -25,8 +25,8 @@
         </div>
         <button class="profile__add-button" type="button"></button>
       </section>
-
-      <section class="card">
+      <section class="card"></section>
+      <!-- <section class="card">
         <ul class="card__items">
           <li class="card__item">
             <img src="./images/c1.jpg" alt="Фото Мексика" class="card__item-image" />
@@ -71,7 +71,7 @@
             </div>
           </li>
         </ul>
-      </section>
+      </section> -->
     </main>
 
     <footer class="footer">
@@ -90,6 +90,19 @@
       </div>
     </div>
 
+    <template id="template__elements">
+      <div class="place">
+        <div class="place__images">
+          <img class="place__img">
+          <img src="./images/trash.svg" class="place__trash" alt="удалить">
+        </div>
+        <div class="place__content">
+          <h2 class="place__title"></h2>
+          <button type="button" class="place__like"></button>
+        </div>
+      </div>
+    </template>
+    
     <script src="./script/profile.js"></script>
 
   </body>

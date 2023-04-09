@@ -1,0 +1,16 @@
+.form {
+  min-width: 350px;
+  font-weight: 400;
+  line-height: 17px;
+  font-size: 14px;
+  border: none;
+  color: #000000;
+  border-bottom: 1px solid #000000;
+  outline: none;
+}
+
+@media (max-width: 1023px) {
+  .form {
+      min-width: 230px;
+  }
+}
