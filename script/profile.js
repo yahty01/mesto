@@ -20,17 +20,23 @@ buttonEditProfile.addEventListener('click', function popupOpen() {
   jobInput.value = jobProfile.textContent;
 });
 
-buttonEditClose.addEventListener('click', popupClose);
+buttonEditClose.addEventListener('click', closePopup);
 
 function handleFormSubmit (evt) {
   evt.preventDefault();
   nameProfile.textContent = nameInput.value;
   jobProfile.textContent = jobInput.value;
-  popupClose();
+  closePopup();
 }
 
 formElement.addEventListener('submit', handleFormSubmit); 
+buttonEditClose.addEventListener('click', () => {closePopup(popupProfile)}); 
 
-function popupClose() {
+
+function openPopup(popup) { 
+  popup.classList.add('popup_opened'); 
+}; 
+
+function closePopup(popup) {
   popup.classList.remove('popup_opened');
 };
