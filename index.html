@@ -25,64 +25,21 @@
         </div>
         <button class="profile__add-button" type="button"></button>
       </section>
-      <section class="card"></section>
-      <!-- <section class="card">
-        <ul class="card__items">
-          <li class="card__item">
-            <img src="./images/c1.jpg" alt="Фото Мексика" class="card__item-image" />
-            <div class="card__item-description">
-              <h2 class="card__item-title">Мексика</h2>
-              <button type="button" class="card__item-like-button"></button>
-            </div>
-          </li>
-          <li class="card__item">
-            <img src="./images/c2.jpg" alt="Фото Бразилия" class="card__item-image" />
-            <div class="card__item-description">
-              <h2 class="card__item-title">Бразилия</h2>
-              <button type="button" class="card__item-like-button"></button>
-            </div>
-          </li>
-          <li class="card__item">
-            <img src="./images/c3.jpg" alt="Фото Чехия" class="card__item-image" />
-            <div class="card__item-description">
-              <h2 class="card__item-title">Чехия</h2>
-              <button type="button" class="card__item-like-button"></button>
-            </div>
-          </li>
-          <li class="card__item">
-            <img src="./images/c4.jpg" alt="Фото Аргентина" class="card__item-image" />
-            <div class="card__item-description">
-              <h2 class="card__item-title">Аргентина</h2>
-              <button type="button" class="card__item-like-button"></button>
-            </div>
-          </li>
-          <li class="card__item">
-            <img src="./images/c5.jpg" alt="Фото Испания" class="card__item-image" />
-            <div class="card__item-description">
-              <h2 class="card__item-title">Испания</h2>
-              <button type="button" class="card__item-like-button"></button>
-            </div>
-          </li>
-          <li class="card__item">
-            <img src="./images/c6.jpg" alt="Фото Франция" class="card__item-image" />
-            <div class="card__item-description">
-              <h2 class="card__item-title">Франция</h2>
-              <button type="button" class="card__item-like-button"></button>
-            </div>
-          </li>
-        </ul>
-      </section> -->
+      <section class="card">
+        <div class="card__items"></div>
+      </section>
     </main>
 
     <footer class="footer">
       <p class="footer__copyright">2023 &copy; Savelev Egor</p>
     </footer>
 
-    <div class="popup">
+    <div class="popup popup_type_profile">
       <div class="popup__container">
         <button class="popup__close-button" type="button"></button>
         <h2 class="popup__title">Редактировать профиль</h2>
-        <form class="form" name="editProfile">
+        <form class="form form_type_profile" name="editProfile">
+          <!-- может поменять местами с h2? -->
           <input type="text" placeholder="Ваше имя" class="form__input form__input_type_name" name="profileName" id="profile_name" />
           <input type="text" placeholder="Ваша профессия" class="form__input form__input_type_job" name="profileJob" id="profile_job" />
           <button type="submit" class="form__submit">Сохранить</button>
@@ -90,20 +47,39 @@
       </div>
     </div>
 
+    <div class="popup popup_type_cards">
+      <div class="popup__cards-container">
+        <button class="popup__cards-close-button" type="button"></button>
+        <form class="form form_type_cards" name="addCards">
+          <h2 class="popup__title">Новое место</h2>
+          <input type="text" placeholder="Название" class="form__input form__input_type_title" name="profileTitle" id="profile_title" />
+          <input type="text" placeholder="Ссылка на картинку" class="form__input form__input_type_link" name="profileLink" id="profile_link" />
+          <button type="submit" class="form__cards-submit">Создать</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="popup popup_type_image">
+      <div class="popup__image-container">
+        <button class="popup__image-close-button" type="button"></button>
+        <img src="./images/dombai.png" class="popup__image-card" alt="Домбай" />
+        <h2 class="popup__image-title">Домбай</h2>
+      </div>
+    </div>
+
     <template id="template__elements">
-      <div class="place">
-        <div class="place__images">
-          <img class="place__img">
-          <img src="./images/trash.svg" class="place__trash" alt="удалить">
+      <div class="card__item">
+        <div class="card__images">
+          <img class="card__item-image" />
+          <img src="./images/deleteImage.svg" class="card__item-delete-button" alt="удалить" />
         </div>
-        <div class="place__content">
-          <h2 class="place__title"></h2>
-          <button type="button" class="place__like"></button>
+        <div class="card__item-description">
+          <h2 class="card__item-title"></h2>
+          <button type="button" class="card__item-like-button"></button>
         </div>
       </div>
     </template>
-    
-    <script src="./script/profile.js"></script>
 
+    <script src="./script/index.js"></script>
   </body>
 </html>

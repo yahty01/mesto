@@ -1,11 +1,12 @@
-.card__delete-button {
+.card__item-delete-button {
   width: 18px;
   height: 19px;
   position: absolute;
   cursor: pointer;
   top: 20px;
   right: 20px;
+  border-style: none;
 }
-.card__delete-button:hover {
+.card__item-delete-button:hover {
   opacity: 0.6;
 }

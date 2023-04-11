@@ -9,7 +9,7 @@
   list-style:none;
  
 }
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1023px){
    .card__items {
     grid-template-columns: repeat(2, 1fr);
     padding: 51px 0 0 0;
