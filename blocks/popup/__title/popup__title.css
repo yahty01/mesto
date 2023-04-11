@@ -18,3 +18,11 @@
       font-size: 18px;
   }
 }
+
+@media (max-width: 400px) {
+  .popup__title {
+      padding-top: 15px;
+      margin-top: 6px;
+      margin-bottom: 11px;
+  }
+}
