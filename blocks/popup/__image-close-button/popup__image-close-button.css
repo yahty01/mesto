@@ -17,7 +17,7 @@
   opacity: 0.6;
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 1023px) {
   .popup__image-close-button {
     background-image: url(../../../images/imgCloseIcon320.svg);
     top: -35px;
