@@ -107,7 +107,8 @@ function EditCardsSubmit (evt) {
   }; 
  
   renderImageElement(createImageElement(cardsData)); 
-   
+  inputNameCard.value = "";
+  inputLinkCard.value = "";
   closePopup(popupCards); 
 }; 
  
