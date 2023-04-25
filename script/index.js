@@ -34,6 +34,7 @@ buttonEditProfile.addEventListener("click", () => {
 buttonAddCard.addEventListener("click", () => {openPopup(popupCards);});
 buttonEditClose.addEventListener("click", () => {closePopup(popupProfile);});
 buttonAddClose.addEventListener("click", () => {closePopup(popupCards);});
+buttonImageClose.addEventListener("click", () => {closePopup(popupImage);});
 
 formCards.addEventListener("submit", editCardsSubmit);
 formProfile.addEventListener("submit", profileFormSubmit);
@@ -85,9 +86,6 @@ initialCards.forEach((cards) => {
   const element = createImageElement(cards);
   renderImageElement(element);
 });
-buttonImageClose.addEventListener("click", () => {
-  closePopup(popupImage);
-});
 
 function editCardsSubmit(evt) {
   evt.preventDefault();
@@ -103,5 +101,5 @@ function editCardsSubmit(evt) {
   renderImageElement(createImageElement(cardsData));
   inputNameCard.value = "";
   inputLinkCard.value = "";
-  closePopup(popupCards);
+ // closePopup(popupCards);
 }
