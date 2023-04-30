@@ -33,15 +33,17 @@
     <footer class="footer">
       <p class="footer__copyright">2023 &copy; Savelev Egor</p>
     </footer>
-
+    
+    <!-- Попапы -->
     <div class="popup popup_type_profile">
       <div class="popup__container">
         <button class="popup__close-button" type="button"></button>
         <h2 class="popup__title">Редактировать профиль</h2>
-        <form class="form form_type_profile" name="editProfile">
-          <!-- может поменять местами с h2? -->
-          <input type="text" placeholder="Ваше имя" class="form__input form__input_type_name" name="profileName" id="profile_name" />
-          <input type="text" placeholder="Ваша профессия" class="form__input form__input_type_job" name="profileJob" id="profile_job" />
+        <form class="form form_type_profile" name="editProfile" novalidate>
+          <input type="text" placeholder="Ваше имя" class="form__input form__input_type_name" name="profileName" id="profileName" minlength="2" maxlength="40" required autocomplete="off">
+          <span id="error-profileName" class="form__error"></span>
+          <input type="text" placeholder="Ваша профессия" class="form__input form__input_type_job" name="profileJob" id="profileJob" minlength="2" maxlength="200" required autocomplete="off">
+          <span id="error-profileJob" class="form__error"></span>
           <button type="submit" class="form__submit">Сохранить</button>
         </form>
       </div>
@@ -51,10 +53,12 @@
       <div class="popup__cards-container">
         <button class="popup__cards-close-button" type="button"></button>
         <h2 class="popup__title">Новое место</h2>
-        <form class="form form_type_cards" name="addCards">
-          <input type="text" placeholder="Название" class="form__input form__input_type_title" name="profileTitle" id="profile_title" />
-          <input type="text" placeholder="Ссылка на картинку" class="form__input form__input_type_link" name="profileLink" id="profile_link" />
-          <button type="submit" class="form__cards-submit">Создать</button>
+        <form class="form form_type_cards" name="addCards" novalidate>
+          <input type="text" placeholder="Название" class="form__input form__input_type_title" name="profileTitle" id="profileTitle" minlength="2" maxlength="30" required autocomplete="off">
+          <span id="error-profileTitle" class="form__error"></span>
+          <input type="URL" placeholder="Ссылка на картинку" class="form__input form__input_type_link" name="profileLink" id="profileLink" minlength="2" required>
+          <span id="error-profileLink" class="form__error"></span>
+          <button type="submit" class="form__cards-submit form__submit_type_cards">Создать</button>
         </form>
       </div>
     </div>
@@ -62,10 +66,11 @@
     <div class="popup popup_type_image">
       <div class="popup__image-container">
         <button class="popup__image-close-button" type="button"></button>
-        <img src="./images/dombai.png" class="popup__image-card" alt="Домбай" />
-        <h2 class="popup__image-title">Домбай</h2>
+        <img src="#" class="popup__image-card" alt="Домбай" />
+        <h2 class="popup__image-title"></h2>
       </div>
     </div>
+    <!-- конец Попапов -->
 
     <template id="template__elements">
       <div class="card__item">
@@ -80,6 +85,7 @@
       </div>
     </template>
 
+    <script src="./script/validation.js"></script>
     <script src="./script/stockCards.js"></script>
     <script src="./script/index.js"></script>
   </body>
