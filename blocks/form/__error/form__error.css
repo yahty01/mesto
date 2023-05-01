@@ -1,5 +1,5 @@
 .form__error {
-  margin-left: 22px;
+  margin-left: 36px;
   font-weight: 400;
   font-size: 12px;
   line-height: 15px;
@@ -9,8 +9,8 @@
   min-height: 30px;
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 1023px) {
   .form__error {
-      margin-left: 36px;
+      margin-left: 22px;
   }
 }

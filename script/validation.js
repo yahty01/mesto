@@ -6,7 +6,7 @@ enableValidation({
   inputErrorClass: 'form__input_invalid',
   errorClass: 'form__error_visible'
 }); 
-
+ 
 function enableButton(config, button){
   button.classList.remove(config.inactiveButtonClass);
   button.removeAttribute('disabled');
