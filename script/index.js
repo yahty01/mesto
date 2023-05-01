@@ -28,7 +28,6 @@ const carditems = document.querySelector(".card__items");
 const buttonCardSubmit = document.querySelector('.form__submit_type_cards');
 const buttonProfileSubmit = document.querySelector('.form__submit_type_profile');
 
-
 buttonEditProfile.addEventListener("click", () => {
   openPopup(popupProfile);
   nameInput.value = nameProfile.textContent;
@@ -43,14 +42,12 @@ buttonImageClose.addEventListener("click", () => {closePopup(popupImage);});
 formCards.addEventListener("submit", editCardsSubmit);
 formProfile.addEventListener("submit", profileFormSubmit);
 
-
 function profileFormSubmit(evt) {
   evt.preventDefault();
   nameProfile.textContent = nameInput.value;
   workplaceProfile.textContent = jobInput.value;
   closePopup(popupProfile);
 }
-
 
 const createImageElement = (imageData) => {
   const imageElement = templateElements.content.querySelector(".card__item").cloneNode(true);
@@ -75,7 +72,6 @@ const createImageElement = (imageData) => {
   return imageElement;
 };
 
-
 function renderImageElement(imageElement) {carditems.prepend(imageElement);}
 
 initialCards.forEach((cards) => {
@@ -97,6 +93,7 @@ function editCardsSubmit(evt) {
   renderImageElement(createImageElement(cardsData));
   inputNameCard.value = "";
   inputLinkCard.value = "";
+  closePopup(popupCards); 
 }
 
 // Close and  Open popup ALL
@@ -124,4 +121,3 @@ function openPopup(popup) {
   popup.addEventListener('click', closeOnOverlay);
   document.addEventListener('keydown', closeOnEscape);
 };
-// ------
