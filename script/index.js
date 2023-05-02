@@ -28,27 +28,6 @@ const carditems = document.querySelector(".card__items");
 const buttonCardSubmit = document.querySelector('.form__submit_type_cards');
 const buttonProfileSubmit = document.querySelector('.form__submit_type_profile');
 
-buttonEditProfile.addEventListener("click", () => {
-  openPopup(popupProfile);
-  nameInput.value = nameProfile.textContent;
-  jobInput.value = jobProfile.textContent;
-});
-
-buttonAddCard.addEventListener("click", () => {openPopup(popupCards);});
-buttonEditClose.addEventListener("click", () => {closePopup(popupProfile);});
-buttonAddClose.addEventListener("click", () => {closePopup(popupCards);});
-buttonImageClose.addEventListener("click", () => {closePopup(popupImage);});
-
-formCards.addEventListener("submit", editCardsSubmit);
-formProfile.addEventListener("submit", profileFormSubmit);
-
-function profileFormSubmit(evt) {
-  evt.preventDefault();
-  nameProfile.textContent = nameInput.value;
-  jobProfile.textContent = jobInput.value;
-  closePopup(popupProfile);
-}
-
 const createImageElement = (imageData) => {
   const imageElement = templateElements.content.querySelector(".card__item").cloneNode(true);
   const cardName = imageElement.querySelector(".card__item-title");
@@ -83,20 +62,37 @@ initialCards.forEach((cards) => {
   renderImageElement(element);
 });
 
-function editCardsSubmit(evt) {
+function profileFormSubmit(evt) {
   evt.preventDefault();
+  nameProfile.textContent = nameInput.value;
+  jobProfile.textContent = jobInput.value;
+  closePopup(popupProfile);
+}
 
+buttonEditProfile.addEventListener("click", () => {
+  openPopup(popupProfile);
+  nameInput.value = nameProfile.textContent;
+  jobInput.value = jobProfile.textContent;
+});
+
+buttonAddCard.addEventListener("click", () => {openPopup(popupCards);});
+buttonEditClose.addEventListener("click", () => {closePopup(popupProfile);});
+buttonAddClose.addEventListener("click", () => {closePopup(popupCards);});
+buttonImageClose.addEventListener("click", () => {closePopup(popupImage);});
+formCards.addEventListener("submit", editCardsSubmit);
+formProfile.addEventListener("submit", profileFormSubmit);
+
+function editCardsSubmit(event) {
+  evt.preventDefault();
   const name = inputNameCard.value;
   const link = inputLinkCard.value;
-
   const cardsData = {
     name,
     link,
   };
 
   renderImageElement(createImageElement(cardsData));
-  inputNameCard.value = "";
-  inputLinkCard.value = "";
+  event.target.reset();
   closePopup(popupCards); 
 }
 
