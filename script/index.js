@@ -62,20 +62,13 @@ initialCards.forEach((cards) => {
   renderImageElement(element);
 });
 
-function profileFormSubmit(evt) {
-  evt.preventDefault();
+function profileFormSubmit(event) {
+  event.preventDefault();
   nameProfile.textContent = nameInput.value;
   jobProfile.textContent = jobInput.value;
   closePopup(popupProfile);
 }
 
-buttonEditProfile.addEventListener("click", () => {
-  openPopup(popupProfile);
-  nameInput.value = nameProfile.textContent;
-  jobInput.value = jobProfile.textContent;
-});
-
-buttonAddCard.addEventListener("click", () => {openPopup(popupCards);});
 buttonEditClose.addEventListener("click", () => {closePopup(popupProfile);});
 buttonAddClose.addEventListener("click", () => {closePopup(popupCards);});
 buttonImageClose.addEventListener("click", () => {closePopup(popupImage);});
@@ -83,7 +76,7 @@ formCards.addEventListener("submit", editCardsSubmit);
 formProfile.addEventListener("submit", profileFormSubmit);
 
 function editCardsSubmit(event) {
-  evt.preventDefault();
+  event.preventDefault();
   const name = inputNameCard.value;
   const link = inputLinkCard.value;
   const cardsData = {
