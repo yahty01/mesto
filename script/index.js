@@ -69,6 +69,17 @@ function profileFormSubmit(event) {
   closePopup(popupProfile);
 }
 
+buttonEditProfile.addEventListener("click", () => {
+  nameInput.value = nameProfile.textContent;
+  jobInput.value = jobProfile.textContent;
+  openPopup(popupProfile);
+});
+
+buttonAddCard.addEventListener("click", () => {
+  openCardPopup(popupCards);
+  openPopup(popupCards);
+});
+
 buttonEditClose.addEventListener("click", () => {closePopup(popupProfile);});
 buttonAddClose.addEventListener("click", () => {closePopup(popupCards);});
 buttonImageClose.addEventListener("click", () => {closePopup(popupImage);});
@@ -106,7 +117,6 @@ function closeOnEscape(event) {
 function openCardPopup() {
   buttonCardSubmit.classList.add('form__submit_disable');
   buttonCardSubmit.setAttribute('disabled', true);
-  openPopup(popupCards);
 };
 
 function openProfilePopup() {
