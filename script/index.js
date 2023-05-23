@@ -76,16 +76,13 @@ function editCardsSubmit(event) {
     link,
   };
   
-  renderImageElement(createImageElement(cardsData));
+  carditems.prepend(createCardElement(cardsData));
   event.target.reset();
   closePopup(popupCards); 
   cardValidator.disableButton(); 
 }
 
-function openCardPopup() {
-  buttonCardSubmit.classList.add('form__submit_disable');
-  buttonCardSubmit.setAttribute('disabled', true);
-};
+function openCardPopup(){};
 
 function createCardElement(card) {
   const template = document.getElementById('template__elements').content;
