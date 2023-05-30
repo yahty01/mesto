@@ -1,12 +1,21 @@
-import { Card } from './card.js';
-import { FormValidator } from './FormValidator.js';
-import { openPopup, closePopup } from './utilites.js';
-import { initialCards } from './stockCards.js';
+import Card from '../components/card.js';
+import FormValidator from '../components/FormValidator.js';
+import { openPopup, closePopup } from '../components/utilites.js';
+import { 
+  initialCards, 
+  config,  
+  buttonAddCard,
+  buttonEditProfile,
+  formProfile,
+  formCards,
+  nameInput,
+  jobInput, 
+} from '../utils/constants.js';
+
 export { popupImageCard, popupImageTitle };
 
-const buttonEditProfile = document.querySelector(".profile__edit-button");
+
 const buttonEditClose = document.querySelector(".popup__close-button");
-const buttonAddCard = document.querySelector(".profile__add-button");
 const buttonAddClose = document.querySelector(".popup__cards-close-button");
 const buttonImageClose = document.querySelector(".popup__image-close-button");
 const popupProfile = document.querySelector(".popup_type_profile");
@@ -16,31 +25,16 @@ const popupImageCard = document.querySelector(".popup__image-card");
 const popupImageTitle = document.querySelector(".popup__image-title");
 const nameProfile = document.querySelector(".profile__name");
 const jobProfile = document.querySelector(".profile__workplace");
-const templateElements = document.getElementById("template__elements");
-const formProfile = document.querySelector(".form_type_profile");
-const formCards = document.querySelector(".form_type_cards");
-const nameInput = document.querySelector(".form__input_type_name");
-const jobInput = document.querySelector(".form__input_type_job");
 const inputNameCard = formCards.querySelector(".form__input_type_title");
 const inputLinkCard = formCards.querySelector(".form__input_type_link");
 const carditems = document.querySelector(".card__items");
-const buttonCardSubmit = document.querySelector('.form__submit_type_cards');
 
-const config = {
-  formSelector: '.form',
-  inputSelector: '.form__input',
-  submitButtonSelector: '.form__submit',
-  inactiveButtonClass: 'form__submit_disable',
-  inputErrorClass: 'form__input_invalid',
-  errorClass: 'form__error_visible'
-}; 
+
 
 const profileValidator = new FormValidator(config, formProfile);
 profileValidator.enableValidation();
 const cardValidator = new FormValidator(config, formCards);
 cardValidator.enableValidation();
-
-function renderImageElement(imageElement) {carditems.prepend(imageElement);}
 
 
 function profileFormSubmit(event) {

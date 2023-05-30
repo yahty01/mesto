@@ -1,8 +1,8 @@
 import { openPopup } from './utilites.js';
 import { popupImage } from './utilites.js';
-import { popupImageCard, popupImageTitle } from './index.js';
+import { popupImageCard, popupImageTitle } from '../pages/index.js';
 
-class Card {
+export default class Card {
 
   constructor(data, template){
     this._name = data.name;
@@ -60,4 +60,3 @@ class Card {
   }
 }
 
-export { Card };
