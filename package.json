@@ -1,0 +1,11 @@
+{
+  "name": "mesto",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\">Hi there, I'm <a href=\"https://daniilshat.ru/\" target=\"_blank\">Egor Savelev</a> \r <img src=\"https://github.com/blackcater/blackcater/raw/main/images/Hi.gif\" height=\"32\"/></h1>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
