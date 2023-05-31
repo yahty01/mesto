@@ -1,9 +1,9 @@
-export const buttonEditProfile = document.querySelector(".profile__edit-button");
 export const buttonAddCard = document.querySelector(".profile__add-button");
+export const buttonEditProfile = document.querySelector(".profile__edit-button");
 export const formProfile = document.querySelector(".form_type_profile");
 export const formCards = document.querySelector(".form_type_cards");
-export const jobInput = document.querySelector(".form__input_type_job");
 export const nameInput = document.querySelector(".form__input_type_name");
+export const jobInput = document.querySelector(".form__input_type_job");
 
 export const config = {
   formSelector: '.form',
