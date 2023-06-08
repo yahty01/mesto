@@ -1,15 +1,10 @@
-import { openPopup } from './utilites.js';
-import { popupImage } from './utilites.js';
-import { popupImageCard, popupImageTitle } from '../pages/index.js';
-
 export default class Card {
 
-  constructor(data, template){
+  constructor(data, templateSelector, handleCardClick) {
     this._name = data.name;
     this._title = data.link;
-    this._template = template;
-    this._popupImageCard = popupImageCard;
-    this._popupImageTitle = popupImageTitle;
+    this._template = templateSelector;
+    this._handleCardClick = handleCardClick;
   }
 
   _getTemplate = () => {
@@ -25,23 +20,12 @@ export default class Card {
     evt.target.classList.toggle('card__item-like-button_active');
   }
 
-  _handleOpenPopup = () => {
-    openPopup(popupImage);
-    this._popupImageCard.src = this._title; 
-    this._popupImageTitle.textContent = this._name; 
-    this._popupImageCard.alt = this._name;
-  }
-
   _setEventListeners = () => {
-    this._buttonDeleteTrash.addEventListener('click', () => {
-      this._deleteCard();
-    });
+    this._buttonDeleteTrash.addEventListener('click', this._deleteCard.bind(this));
     this._buttonPlaceLike.addEventListener('click', (evt) => {
       this._like(evt);
     });
-    this._cardImage.addEventListener('click', () => {
-      this._handleOpenPopup();
-    })
+    this._cardImage.addEventListener('click', () => { this._handleCardClick(this._name, this._title) })
   };
 
   generateCard = () => {
@@ -59,4 +43,3 @@ export default class Card {
     return this._cardElement;
   }
 }
-
