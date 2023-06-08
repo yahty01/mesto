@@ -17,7 +17,7 @@ export default class Card {
   }
 
   _like = (evt) => {
-    evt.target.classList.toggle('card__item-like-button_active');
+    evt.target.classList.toggle('card-item__like_active');
   }
 
   _setEventListeners = () => {
@@ -30,10 +30,10 @@ export default class Card {
 
   generateCard = () => {
     this._cardElement = this._getTemplate();
-    this._buttonDeleteTrash = this._imageElement.querySelector('.card__item-delete-button'); 
-    this._buttonPlaceLike = this._imageElement.querySelector('.card__item-like-button');
-    this._cardName = this._imageElement.querySelector('.card__item-title'); 
-    this._cardImage = this._imageElement.querySelector('.card__item-image');
+    this._buttonDeleteTrash = this._imageElement.querySelector('.card-item__trash'); 
+    this._buttonPlaceLike = this._imageElement.querySelector('.card-item__like');
+    this._cardName = this._imageElement.querySelector('.card-item__title'); 
+    this._cardImage = this._imageElement.querySelector('.card-item__img');
 
     this._cardName.textContent = this._name; 
     this._cardImage.src = this._title; 

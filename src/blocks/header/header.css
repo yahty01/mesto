@@ -1,22 +1,8 @@
 .header {
-  margin: 0 auto;
-  max-width: 880px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border-bottom: 1px solid rgba(84, 84, 84, 70%);
-
-}
-
-@media screen and (max-width: 1023px) {
-  .header {
-    width: 100%;
-    padding: 28px 0 0 0;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .header {
-    justify-content: flex-end;
-  }
+    margin: 0 auto;
+    max-width: 880px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid rgba(84, 84, 84, 70%);
 }

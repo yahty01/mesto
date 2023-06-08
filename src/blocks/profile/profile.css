@@ -1,19 +1,29 @@
 .profile {
-  width: 100%;
-  display: flex;
-  margin: 40px auto 0;
-  max-width: 880px;
-
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 38px 19px 33px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
 }
 
-@media screen and (max-width: 1024px) {
-  .profile {
-    max-width: none;
-    flex-direction: column;
-    width: calc(100% - (19px + 19px));
-    padding: 42px 19px 0 19px;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0;
-  }
+@media (min-width: 768px) {
+    .profile {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 40px 19px 51px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .profile {
+        padding: 40px 72px 51px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .profile {
+        padding: 40px 200px 51px;
+    }
 }
