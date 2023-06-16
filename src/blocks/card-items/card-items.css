@@ -1,4 +1,4 @@
-.card {
+.card-items {
     margin: 0 auto;
     padding: 0 19px 0;
     display: grid;
@@ -9,19 +9,19 @@
 }
 
 @media (min-width: 619px) {
-    .card {
+    .card-items {
         column-gap: 17px;
     }
 }
 
 @media (min-width: 1024px) {
-    .card {
+    .card-items {
         padding: 0 72px 0;
     }
 }
 
 @media (min-width: 1280px) {
-    .card {
+    .card-items {
         padding: 0 200px 0;
     }
 }

@@ -1,17 +1,8 @@
 .card-item__like {
+    padding: 0;
     margin: 0;
-    padding-top: 5px;
-    width: 22px;
-    height: 19px;
-    transition: 0.4s;
-    transform: translate(0, 7px);
-    cursor: pointer;
-    background-image: url(../../../images/Vector.svg);
-    background-color: #FFFFFF;
-    border: none;
-    background-repeat: no-repeat;
-}
-
-.card-item__like:hover {
-    opacity: 0.5;
+    min-width: 22px;
+    min-height: 35px;
+    display: flex;
+    flex-direction: column;
 }
