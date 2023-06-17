@@ -1,6 +1,6 @@
 export default class Card {
 
-  constructor(data, templateSelector, handleCardClick, handleDeleteButtonCard, userId,api, handleOpenPopup) {
+  constructor(data, templateSelector, handleCardClick, handleDeleteButtonCard, userId, api, handleOpenPopup, handleLike) {
     this._name = data.name;
     this._title = data.link;
     this._template = templateSelector;
@@ -12,6 +12,7 @@ export default class Card {
     this._cardOwnerId = data.owner._id;
     this._likes = data.likes;
     this._handleOpenPopup = handleOpenPopup;
+    this._handleLike = handleLike;
   }
 
   getIdCard() {
@@ -43,25 +44,7 @@ export default class Card {
   }
 
   _like = () => {
-    if(this._buttonCardItemLike.classList.contains('card-item__like_type_active')){
-      this._api.removeLike(this._cardId)
-        .then((res) => {
-          this._buttonCardItemLike.classList.remove('card-item__like_type_active');
-          this._numberOfLikes.textContent = res.likes.length;
-        })
-        .catch((err) => {
-          console.log(`Ошибка: ${err}`);
-        });
-    } else {
-      this._api.like(this._cardId)
-        .then((res) => {
-          this._buttonCardItemLike.classList.add('card-item__like_type_active');
-          this._numberOfLikes.textContent = res.likes.length;
-        })
-        .catch((err) => {
-          console.log(`Ошибка: ${err}`);
-        });
-    }
+    this._handleLike(this._cardId, this._buttonCardItemLike, this._numberOfLikes);
   }
 
   _setEventListeners = () => {
@@ -89,5 +72,10 @@ export default class Card {
     this._cardImage.alt = this._name; 
     this._setEventListeners();
     return this._cardElement;
+  }
+
+  isLiked() {
+    // Вернуть true, если карточка лайкнута, иначе false
+    return this._element.querySelector('.element__like').classList.contains('element__like_active');
   }
 }

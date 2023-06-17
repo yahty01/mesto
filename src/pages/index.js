@@ -161,7 +161,8 @@ function createCardElement(card) {
     handleCardDeleteSubmit, 
     userInfo.userId, 
     api,
-    handleOpenPopup
+    handleOpenPopup,
+    handleLike
     );
   const newCard = cardElement.generateCard();
   return newCard;
@@ -188,4 +189,26 @@ function handleCardDeleteSubmit(card) {
 // Обработчик открытия попапа удаления карточки
 function handleOpenPopup(card) {
   popupWithCardDelete.open(card);
+}
+
+function handleLike(cardId, likeButton, numberOfLikes) {
+  if(likeButton.classList.contains('card-item__like_type_active')){
+    api.removeLike(cardId)
+      .then((res) => {
+        likeButton.classList.remove('card-item__like_type_active');
+        numberOfLikes.textContent = res.likes.length;
+      })
+      .catch((err) => {
+        console.log(`Ошибка: ${err}`);
+      });
+  } else {
+    api.like(cardId)
+      .then((res) => {
+        likeButton.classList.add('card-item__like_type_active');
+        numberOfLikes.textContent = res.likes.length;
+      })
+      .catch((err) => {
+        console.log(`Ошибка: ${err}`);
+      });
+  }
 }
