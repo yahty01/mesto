@@ -1,6 +1,6 @@
 export default class Card {
 
-  constructor(data, templateSelector, handleCardClick, handleDeleteButtonCard, userId, api, handleOpenPopup) {
+  constructor(data, templateSelector, handleCardClick, handleDeleteButtonCard, userId,api, handleOpenPopup) {
     this._name = data.name;
     this._title = data.link;
     this._template = templateSelector;
@@ -33,20 +33,20 @@ export default class Card {
     }
   }
 
-  _cardIsliked = () => {
+  _islikedCard = () => {
     const isLiked = this._likes.some((user) => {
       return this._userId === user._id;
     });
 
-    if(isLiked) { this._buttonCaedItemLike.classList.add('card-item__like_type_active') }
+    if(isLiked) { this._buttonCardItemLike.classList.add('card-item__like_type_active') }
 
   }
 
   _like = () => {
-    if(this._buttonCaedItemLike.classList.contains('card-item__like_type_active')){
+    if(this._buttonCardItemLike.classList.contains('card-item__like_type_active')){
       this._api.removeLike(this._cardId)
         .then((res) => {
-          this._buttonCaedItemLike.classList.remove('card-item__like_type_active');
+          this._buttonCardItemLike.classList.remove('card-item__like_type_active');
           this._numberOfLikes.textContent = res.likes.length;
         })
         .catch((err) => {
@@ -55,7 +55,7 @@ export default class Card {
     } else {
       this._api.like(this._cardId)
         .then((res) => {
-          this._buttonCaedItemLike.classList.add('card-item__like_type_active');
+          this._buttonCardItemLike.classList.add('card-item__like_type_active');
           this._numberOfLikes.textContent = res.likes.length;
         })
         .catch((err) => {
@@ -66,7 +66,7 @@ export default class Card {
 
   _setEventListeners = () => {
     this._buttonDeleteTrash.addEventListener('click', () => this._handleOpenPopup(this));
-    this._buttonCaedItemLike.addEventListener('click', () => {
+    this._buttonCardItemLike.addEventListener('click', () => {
       this._like();
     });
     this._cardImage.addEventListener('click', () => { 
@@ -77,12 +77,12 @@ export default class Card {
   generateCard = () => {
     this._cardElement = this._getTemplate();
     this._buttonDeleteTrash = this._imageElement.querySelector('.card-item__trash'); 
-    this._buttonCaedItemLike = this._imageElement.querySelector('.card-item__like_type_button');
+    this._buttonCardItemLike = this._imageElement.querySelector('.card-item__like_type_button');
     this._numberOfLikes = this._imageElement.querySelector('.card-item__like_type_number');
     this._cardName = this._imageElement.querySelector('.card-item__title'); 
     this._cardImage = this._imageElement.querySelector('.card-item__img');
     this._deleteButtonTrush();
-    this._cardIsliked();
+    this._islikedCard();
     this._numberOfLikes.textContent = this._likes.length;
     this._cardName.textContent = this._name; 
     this._cardImage.src = this._title; 
