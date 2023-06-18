@@ -160,9 +160,8 @@ function createCardElement(card) {
     handleCardClick, 
     handleCardDeleteSubmit, 
     userInfo.userId, 
-    api,
     handleOpenPopup,
-    handleLike
+    handleLike,
     );
   const newCard = cardElement.generateCard();
   return newCard;
